@@ -1,7 +1,6 @@
 // Daniel Hernandez Monroy
 // Assignment
 
-import java.util.Scanner;
 public class Craps {
 public static void main(String[] args) {
 
@@ -11,10 +10,10 @@ public static void main(String[] args) {
         int point;
         boolean play = true;
 
-        diceOne = getRandom();
-        diceTwo = getRandom();
+        diceOne = rollRandom();
+        diceTwo = rollRandom();
 
-        sum = addDice(diceOne, diceTwo);
+        sum = diceSum(diceOne, diceTwo);
 
         if ((sum == 2) || (sum == 3) || (sum == 12)) {
                 System.out.println("You lose!");
@@ -28,9 +27,9 @@ public static void main(String[] args) {
                 System.out.println("Point rolled is " + point);
 
                 do {
-                        diceOne = getRandom();
-                        diceTwo = getRandom();
-                        sum = addDice(diceOne, diceTwo);
+                        diceOne = rollRandom();
+                        diceTwo = rollRandom();
+                        sum = diceSum(diceOne, diceTwo);
 
                         if (sum == 7) {
                                 System.out.println("You lose!");
@@ -46,7 +45,7 @@ public static void main(String[] args) {
 
 } //End of main
 
-public static int getRandom() {
+public static int rollRandom() {
         int dice;
         int min = 1;
         int max = 6;
@@ -54,9 +53,9 @@ public static int getRandom() {
 
         dice = (int)(Math.random() * range) + min;
         return dice;
-} //End of getRandom
+} //End of rollRandom
 
-public static int addDice(int diceOne, int diceTwo) {
+public static int diceSum(int diceOne, int diceTwo) {
         int sum;
 
         sum = diceOne + diceTwo;
