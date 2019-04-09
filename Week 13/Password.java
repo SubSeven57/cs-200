@@ -40,7 +40,7 @@ public class Password {
        }
 
        else {
-         System.out.println("Invalid Password: ");
+         System.out.println("Invalid Password");
        }
      }
 
@@ -54,7 +54,7 @@ public class Password {
      for (i=0; i<pass.length(); i++) {
        convertedChar = pass.charAt(i);
 
-       if (convertedChar >= 'A' && convertedChar <= 'Z') {
+       if ((convertedChar >= 'A') && (convertedChar <= 'Z')) {
          status = true;
        }
      }
@@ -69,7 +69,7 @@ public class Password {
      for (i=0; i<pass.length(); i++) {
        convertedChar = pass.charAt(i);
 
-       if (convertedChar >= 'a' && convertedChar <= 'z') {
+       if ((convertedChar >= 'a') && (convertedChar <= 'z')) {
          status = true;
        }
      }
@@ -84,7 +84,7 @@ public class Password {
      for (i=0; i<pass.length(); i++) {
        convertedChar = pass.charAt(i);
 
-       if (convertedChar >= '0' && convertedChar <= '9') {
+       if ((convertedChar) >= '0' && (convertedChar <= '9')) {
          status = true;
        }
      }
