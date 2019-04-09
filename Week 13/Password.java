@@ -17,8 +17,8 @@ public class Password {
 
      stringLength = password.length();
 
-     if (stringLenght < 8) {
-       System.out.println("Password needs to be at least 8 characters");
+     if (stringLength < 8) {
+       System.out.println("Invalid. Less than 8 characters. ");
      }
 
      else {
@@ -84,7 +84,7 @@ public class Password {
      for (i=0; i<pass.length(); i++) {
        convertedChar = pass.charAt(i);
 
-       if ((convertedChar) >= '0' && (convertedChar <= '9')) {
+       if ((convertedChar >= '0') && (convertedChar <= '9')) {
          status = true;
        }
      }
