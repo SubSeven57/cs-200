@@ -5,7 +5,7 @@ public class Password {
      Scanner keyboard = new Scanner(System.in);
 
      String password;
-     int stringLenght;
+     int stringLength;
 
      boolean uppercase;
      boolean lowercase;
@@ -15,7 +15,7 @@ public class Password {
      System.out.print("Enter your password: ");
      password = keyboard.next();
 
-     stringLenght = password.length();
+     stringLength = password.length();
 
      if (stringLenght < 8) {
        System.out.println("Password needs to be at least 8 characters");
